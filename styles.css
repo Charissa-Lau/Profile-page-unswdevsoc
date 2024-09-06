@@ -1,4 +1,4 @@
-/* Basic Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -7,67 +7,72 @@
 
 body, html {
     height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    padding: 20px;
+    align-items: start; /* Aligns items to the top of the container */
+}
+
+.harmony, .discord {
+    flex: 1;
+    background: #fff;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.harmony {
+    background: linear-gradient(to bottom, #b2fefa 0%, #cdf1d8 100%);
     font-family: 'Libre Baskerville', serif;
 }
 
-header {
-    background: #f3c1c1;
-    color: #fff;
-    padding: 10px 20px;
-    text-align: center;
+.discord {
+    background: linear-gradient(to bottom, #f05053 0%, #e1eec3 100%);
+    font-family: 'Roboto', sans-serif;
+}
+
+.harmony:hover, .discord:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 16px rgba(0,0,0,0.2);
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 footer {
-    background: #a9d3ab;
-    color: #fff;
     text-align: center;
+    padding: 10px;
+    background: #333;
+    color: #fff;
     position: fixed;
     width: 100%;
     bottom: 0;
 }
 
-.container {
-    display: flex;
-    height: calc(100% - 80px); /* Adjust height considering header/footer */
-    justify-content: center;
-    align-items: center;
-}
-
-.harmony, .discord {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100%;
-    transition: transform 0.5s ease, background 0.5s ease;
-}
-
-.harmony {
-    background: linear-gradient(135deg, rgb(106, 157, 174) 0%, rgb(171, 218, 171) 100%);
-    color: rgba(5, 5, 60, 0.681);
-}
-
-.discord {
-    background: linear-gradient(135deg, red 0%, rgb(224, 107, 58) 100%);
-    color: rgb(213, 203, 150);
-}
-
-.harmony:hover, .discord:hover {
-    transform: scale(1.1);
-}
-
-h1, h2 {
-    margin-bottom: 20px;
-    font-family: 'Arial Bold', sans-serif;
-}
-
-p {
-    width: 80%; /* Responsive text alignment */
-    text-align: center;
-}
-
-/* Responsive Design */
 @media (max-width: 800px) {
     .container {
         flex-direction: column;
