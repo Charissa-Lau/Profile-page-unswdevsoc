@@ -1,3 +1,4 @@
+/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,45 +7,58 @@
 
 body, html {
     height: 100%;
-    font-family: 'Libre Baskerville', serif; /* Primary text */
+    font-family: 'Arial', sans-serif;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
 
 .container {
     display: flex;
-    min-height: 100vh;
-    align-items: stretch; /* Ensure divs fill the vertical space */
+    height: calc(100% - 40px); /* Adjust for footer only */
+    justify-content: center;
+    align-items: center;
 }
 
 .harmony, .discord {
     flex: 1;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 40px;
-    color: #fff; /* White text for better contrast */
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.5s ease, background 0.5s ease;
 }
 
 .harmony {
-    background: #b2fefa; /* Light teal for harmony */
+    background: lightblue;
+    color: darkblue;
 }
 
 .discord {
-    background: #f05053; /* Soft red for discord */
+    background: darkred;
+    color: white;
+}
+
+.harmony:hover, .discord:hover {
+    transform: scale(1.1);
 }
 
 h2 {
-    font-family: 'Arial', sans-serif; /* Titles in Arial */
-    font-size: 48px; /* Larger size for headers */
-    font-weight: bold;
+    font-size: 36px; /* Titles are 2 times bigger than body text */
     margin-bottom: 20px;
 }
 
 p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 20px;
+    font-size: 18px; /* Normal body text size */
+    width: 80%; /* Responsive text alignment */
+    text-align: center;
 }
 
 a {
@@ -56,16 +70,7 @@ a:hover {
     text-decoration: underline;
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #333;
-    color: #fff;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
+/* Responsive Design */
 @media (max-width: 800px) {
     .container {
         flex-direction: column;
