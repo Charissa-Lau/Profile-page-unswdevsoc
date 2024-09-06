@@ -7,7 +7,7 @@
 
 body, html {
     height: 100%;
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Libre Baskerville', serif; /* Consistent serif font */
 }
 
 header {
@@ -24,11 +24,12 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+    padding: 10px; /* Ensures padding inside the footer */
 }
 
 .container {
     display: flex;
-    height: calc(100% - 40px); /* Adjust for footer only */
+    height: calc(100% - 60px); /* Adjusted for both header and footer */
     justify-content: center;
     align-items: center;
 }
@@ -39,7 +40,7 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100%;
+    padding: 20px; /* Consistent padding for content */
     transition: transform 0.5s ease, background 0.5s ease;
 }
 
@@ -57,14 +58,15 @@ footer {
     transform: scale(1.1);
 }
 
-h2 {
-    font-size: 36px; /* Titles are 2 times bigger than body text */
+h1, h2 {
+    font-size: 36px; /* Larger titles */
     margin-bottom: 20px;
 }
 
 p {
-    font-size: 18px; /* Normal body text size */
-    width: 80%; /* Responsive text alignment */
+    font-size: 18px;
+    margin-bottom: 20px; /* Adds space after each paragraph */
+    width: 80%;
     text-align: center;
 }
 
