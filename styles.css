@@ -37,13 +37,11 @@ footer {
 }
 
 .harmony {
-    background: lightblue;
-    color: darkblue;
+    background: linear-gradient(to top left, #b2fefa 0%, #cdf1d8 100%);
 }
 
 .discord {
-    background: darkred;
-    color: white;
+    background: linear-gradient(to bottom right, #f05053 0%, #e1eec3 100%);
 }
 
 .harmony:hover, .discord:hover {
