@@ -29,12 +29,12 @@ body, html {
 }
 
 .harmony {
-    background: linear-gradient(to bottom, #b2fefa 0%, #cdf1d8 100%);
+    background: linear-gradient(to bottom, #2fd6ce 0%, #8cc7a2 100%);
     font-family: 'Libre Baskerville', serif;
 }
 
 .discord {
-    background: linear-gradient(to bottom, #f05053 0%, #e1eec3 100%);
+    background: linear-gradient(to bottom, #f06850 0%, #cb875a 100%);
     font-family: 'Roboto', sans-serif;
 }
 
