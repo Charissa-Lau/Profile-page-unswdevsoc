@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -13,29 +12,28 @@ body, html {
 
 .container {
     display: flex;
-    height: 100%;
-    padding: 20px;
-    align-items: start; /* Aligns items to the top of the container */
+    height: 100vh; /* Full viewport height */
+    align-items: stretch; /* Stretches the children to fill the container */
+    justify-content: center; /* Center children horizontally */
 }
 
 .harmony, .discord {
     flex: 1;
-    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text */
     margin: 10px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
-}
-
-.harmony {
-    background: linear-gradient(to bottom, #2fd6ce 0%, #8cc7a2 100%);
-    font-family: 'Libre Baskerville', serif;
+    background: linear-gradient(to bottom, #b2fefa 0%, #cdf1d8 100%);
 }
 
 .discord {
-    background: linear-gradient(to bottom, #f06850 0%, #cb875a 100%);
-    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom, #f05053 0%, #e1eec3 100%);
 }
 
 .harmony:hover, .discord:hover {
