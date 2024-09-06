@@ -1,0 +1,75 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Libre Baskerville', serif;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.container {
+    display: flex;
+    height: calc(100% - 80px); /* Adjust height considering header/footer */
+    justify-content: center;
+    align-items: center;
+}
+
+.harmony, .discord {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.5s ease, background 0.5s ease;
+}
+
+.harmony {
+    background: linear-gradient(135deg, lightblue 0%, lightgreen 100%);
+    color: darkblue;
+}
+
+.discord {
+    background: linear-gradient(135deg, red 0%, orange 100%);
+    color: white;
+}
+
+.harmony:hover, .discord:hover {
+    transform: scale(1.1);
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    font-family: 'Libre Baskerville', serif;
+}
+
+p {
+    width: 80%; /* Responsive text alignment */
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+}
