@@ -6,56 +6,45 @@
 
 body, html {
     height: 100%;
-    font-family: 'Libre Baskerville', serif; /* Default font */
-    background: #f0f0f0;
+    font-family: 'Libre Baskerville', serif; /* Primary text */
 }
 
 .container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.yin-yang {
-    position: relative;
-    width: 80vw;
-    height: 80vh;
-    border-radius: 50%;
-    overflow: hidden;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    background: #fff;
+    min-height: 100vh;
+    align-items: stretch; /* Ensure divs fill the vertical space */
 }
 
 .harmony, .discord {
-    width: 100%;
-    height: 50%;
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
     text-align: center;
+    padding: 40px;
+    color: #fff; /* White text for better contrast */
 }
 
 .harmony {
-    border-bottom: 5px solid #000;
-    background: linear-gradient(to top left, #b2fefa 0%, #cdf1d8 100%);
+    background: #b2fefa; /* Light teal for harmony */
 }
 
 .discord {
-    background: linear-gradient(to bottom right, #f05053 0%, #e1eec3 100%);
+    background: #f05053; /* Soft red for discord */
 }
 
 h2 {
-    font-family: 'Arial', sans-serif;
-    font-weight: 700;
-    font-size: 3em; /* 3 times larger than the body text */
+    font-family: 'Arial', sans-serif; /* Titles in Arial */
+    font-size: 48px; /* Larger size for headers */
+    font-weight: bold;
     margin-bottom: 20px;
 }
 
 p {
-    font-size: 1em;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
 a {
@@ -78,8 +67,7 @@ footer {
 }
 
 @media (max-width: 800px) {
-    .yin-yang {
-        width: 90vw;
-        height: 90vw; /* Keep aspect ratio */
+    .container {
+        flex-direction: column;
     }
 }
